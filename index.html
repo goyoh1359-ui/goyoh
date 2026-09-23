@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOYOH | Book A Doctor Anytime, Anywhere</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-teal: #098c83;
+            --dark-teal: #00322e;
+            --light-bg: #f2f9f8;
+            --white: #ffffff;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --border-color: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--white);
+            padding: 1.2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-teal);
+            letter-spacing: -0.5px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-teal);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-teal);
+        }
+
+        .btn-header {
+            background-color: var(--primary-teal);
+            color: var(--white);
+            padding: 0.6rem 1.6rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn-header:hover {
+            background-color: var(--dark-teal);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            font-weight: 800;
+            color: var(--dark-teal);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .pulse-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .pulse-line svg {
+            stroke: var(--primary-teal);
+            stroke-width: 4;
+            fill: none;
+        }
+
+        .hero-subtext {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 540px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-teal);
+            color: var(--white);
+            padding: 0.9rem 2.2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid var(--primary-teal);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-teal);
+            border-color: var(--dark-teal);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-teal);
+            padding: 0.9rem 2.2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border: 2px solid var(--primary-teal);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-teal);
+            color: var(--white);
+        }
+
+        /* Hero Visual Mockup */
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .kiosk-mockup {
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            border: 10px solid var(--dark-teal);
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .kiosk-screen {
+            background: #0f172a;
+            border-radius: 16px;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .screen-header {
+            font-size: 0.9rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .doctor-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-teal);
+            font-size: 3rem;
+        }
+
+        .screen-vitals {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .vital-box {
+            background: rgba(255,255,255,0.1);
+            padding: 0.6rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        /* Trust Banner */
+        .trust-banner {
+            background-color: var(--dark-teal);
+            color: var(--white);
+            text-align: center;
+            padding: 1.2rem;
+            font-size: 1.05rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        /* Section Container */
+        .section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--dark-teal);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Specs Grid */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .spec-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 5px solid var(--primary-teal);
+            text-align: center;
+        }
+
+        .spec-icon {
+            font-size: 2.5rem;
+            color: var(--primary-teal);
+            margin-bottom: 1rem;
+        }
+
+        .spec-card h3 {
+            color: var(--dark-teal);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Workflow Simulator Section */
+        .workflow-box {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .workflow-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+
+        .step-btn {
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .step-btn.active {
+            color: var(--white);
+            background-color: var(--primary-teal);
+        }
+
+        .step-content {
+            display: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .step-content.active {
+            display: flex;
+        }
+
+        .step-text {
+            flex: 1;
+        }
+
+        .step-text h3 {
+            color: var(--dark-teal);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-ui {
+            flex: 1;
+            background: var(--light-bg);
+            border: 2px dashed var(--primary-teal);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Form / Pilot Section */
+        .pilot-section {
+            background-color: var(--dark-teal);
+            color: var(--white);
+            border-radius: 24px;
+            padding: 4rem 3rem;
+            margin: 4rem auto;
+            max-width: 1000px;
+        }
+
+        .pilot-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .pilot-form input, .pilot-form select, .pilot-form button {
+            width: 100%;
+            padding: 0.9rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .pilot-form button {
+            background-color: var(--primary-teal);
+            color: var(--white);
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .pilot-form button:hover {
+            background-color: #077169;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #00221f;
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 5% 1.5rem 5%;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-btns {
+                justify-content: center;
+            }
+            .pulse-line {
+                justify-content: center;
+            }
+            .step-content {
+                flex-direction: column;
+            }
+            .pilot-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <a href="#" class="logo-container">
+            <span class="logo-text">GOYOH</span>
+        </a>
+        <nav>
+            <a href="#about">About Us</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#corporates">For Corporations</a>
+            <a href="#contact" class="btn-header">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Book A Doctor<br>Anytime, Anywhere</h1>
+            <div class="pulse-line">
+                <svg width="220" height="30" viewBox="0 0 220 30">
+                    <path d="M0 15 H140 L150 5 L160 25 L170 2 L180 20 L190 15 H220"/>
+                </svg>
+            </div>
+            <p class="hero-subtext">
+                Your professional health connect solution for immediate, private medical consults via our secure micro-clinics.
+            </p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">Get Started</a>
+                <a href="#simulator" class="btn-secondary">Schedule a Demo</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="kiosk-mockup">
+                <div class="kiosk-screen">
+                    <div class="screen-header"><i class="fa-solid fa-circle-dot"></i> Consultation Live</div>
+                    <div class="doctor-avatar">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+                    <h4>Dr. Sharma</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.8;">General Physician</p>
+                    <div class="screen-vitals">
+                        <div class="vital-box">BP: 120/80</div>
+                        <div class="vital-box">SpO2: 98%</div>
+                        <div class="vital-box">HR: 72 bpm</div>
+                        <div class="vital-box">Temp: 98.6°F</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Banner -->
+    <div class="trust-banner">
+        HIPAA Compliant | Independent 4G/5G | AWS Hosted Secure | Zero Network Footprint
+    </div>
+
+    <!-- Infrastructure & Kiosk Specs -->
+    <section class="section" id="solutions">
+        <h2 class="section-title">Compact & Independent Kiosk Infrastructure</h2>
+        <p class="section-subtitle">Designed to integrate seamlessly into corporate offices and coworking hubs without IT overhead.</p>
+        
+        <div class="specs-grid">
+            <div class="spec-card">
+                <div class="spec-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+                <h3>1.5 sq. ft. Footprint</h3>
+                <p>Fits anywhere from quiet corners to existing phone pods with zero architectural disruption.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Standard 5A Power</h3>
+                <p>Plug-and-play setup requiring only a standard power socket to operate continuously.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon"><i class="fa-solid fa-signal"></i></div>
+                <h3>Dedicated 4G/5G</h3>
+                <p>Bypasses host network entirely with an isolated cellular connection for maximum data privacy.</p>
+            </div>
+            <div class="spec-card">
+                <div class="spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3>AWS Cloud Security</h3>
+                <p>Enterprise cloud database with SSL/TLS transit encryption and ePHI guidelines compliance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Clinical Workflow Simulator -->
+    <section class="section" id="simulator">
+        <h2 class="section-title">Interactive Workflow Preview</h2>
+        <p class="section-subtitle">See how simple a 60-second consultation and prescription delivery is for patients and doctors.</p>
+
+        <div class="workflow-box">
+            <div class="workflow-steps">
+                <button class="step-btn active" onclick="switchStep(1)">1. Kiosk Vitals</button>
+                <button class="step-btn" onclick="switchStep(2)">2. Doctor Lookup</button>
+                <button class="step-btn" onclick="switchStep(3)">3. Clinical Diagnosis</button>
+                <button class="step-btn" onclick="switchStep(4)">4. Rx Delivery</button>
+            </div>
+
+            <div class="step-content active" id="step-1">
+                <div class="step-text">
+                    <h3>1. Self-Serve Intake & Vitals</h3>
+                    <p>The patient walks up to the GOYOH Micro-Clinic, selects their session, and checks automated vitals (Blood Pressure, Heart Rate, SpO2) before starting the video consultation.</p>
+                </div>
+                <div class="step-ui">
+                    <i class="fa-solid fa-heart-pulse" style="font-size: 3rem; color: var(--primary-teal);"></i>
+                    <h4 style="margin-top: 1rem;">Vitals Synced Automatically</h4>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-2">
+                <div class="step-text">
+                    <h3>2. Doctor App Lookup</h3>
+                    <p>The consulting doctor opens the GOYOH Doctor App, enters the patient's registered contact details, verifies profile match, and opens the consultation dashboard.</p>
+                </div>
+                <div class="step-ui">
+                    <i class="fa-solid fa-mobile-screen" style="font-size: 3rem; color: var(--primary-teal);"></i>
+                    <h4 style="margin-top: 1rem;">Patient Found & Verified</h4>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-3">
+                <div class="step-text">
+                    <h3>3. Diagnosis & E-Prescription</h3>
+                    <p>Doctor reviews symptoms, inputs clinical notes, searches for medications with clear dosage instructions, and signs off on the prescription digitally.</p>
+                </div>
+                <div class="step-ui">
+                    <i class="fa-solid fa-file-signature" style="font-size: 3rem; color: var(--primary-teal);"></i>
+                    <h4 style="margin-top: 1rem;">Prescription Saved to AWS</h4>
+                </div>
+            </div>
+
+            <div class="step-content" id="step-4">
+                <div class="step-text">
+                    <h3>4. Instant WhatsApp / Gmail Share</h3>
+                    <p>The doctor taps the share action in the app, generating a secure PDF copy delivered directly to the patient's personal WhatsApp and Email within seconds.</p>
+                </div>
+                <div class="step-ui">
+                    <i class="fa-solid fa-paper-plane" style="font-size: 3rem; color: var(--primary-teal);"></i>
+                    <h4 style="margin-top: 1rem;">Prescription Sent (PDF)</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Request Form -->
+    <section class="pilot-section" id="contact">
+        <div class="pilot-container">
+            <div>
+                <h2 style="font-size: 2.2rem; margin-bottom: 1rem;">Request a 14-Day Zero-Cost Pilot</h2>
+                <p style="opacity: 0.9;">Bring workplace healthcare to your facility with zero setup fee, zero network integration, and minimal footprint requirement.</p>
+            </div>
+            <form class="pilot-form" onsubmit="event.preventDefault(); alert('Thank you! Our pilot team will contact you shortly.');">
+                <input type="text" placeholder="Your Name / Facility Representative" required>
+                <input type="email" placeholder="Work Email" required>
+                <input type="tel" placeholder="Phone Number" required>
+                <select required>
+                    <option value="">Select Facility Type</option>
+                    <option value="coworking">Co-Working Space (e.g. BHIVE)</option>
+                    <option value="enterprise">Corporate Office</option>
+                    <option value="techpark">Tech Park / Real Estate</option>
+                </select>
+                <button type="submit">Deploy Pilot</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 GOYOH Health Connect Private Limited. All Rights Reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem;">AWS-Hosted Infrastructure | HIPAA Compliant Protocols | Isolated 4G/5G Hardware</p>
+    </footer>
+
+    <script>
+        function switchStep(stepNum) {
+            document.querySelectorAll('.step-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.step-content').forEach(content => content.classList.remove('active'));
+
+            document.querySelectorAll('.step-btn')[stepNum - 1].classList.add('active');
+            document.getElementById(`step-${stepNum}`).classList.add('active');
+        }
+    </script>
+</body>
+</html>
