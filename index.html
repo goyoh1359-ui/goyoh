@@ -23,9 +23,10 @@
             --text-muted: #475569;
         }
 
-        /* Smooth Scrolling */
+        /* Smooth Scrolling with Header Offset */
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
 
         * {
@@ -101,8 +102,12 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, var(--light-bg) 0%, #e6f4f1 100%);
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
             text-align: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .hero-content {
@@ -187,28 +192,29 @@
     <!-- Navigation Header -->
     <header>
         <div class="nav-container">
-            <a href="/#" class="logo">GOYOH</a>
+            <a href="#home" class="logo">GOYOH</a>
             <ul class="nav-links">
-                <li><a href="/#about">About Us</a></li>
-                <li><a href="/#solutions">Solutions</a></li>
-                <li><a href="/#corporations">For Corporations</a></li>
-                <li><a href="/#book" class="btn-primary">Book Now</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#corporations">For Corporations</a></li>
+                <li><a href="#book" class="btn-primary">Book Now</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- 1. First Page / Home Section -->
+    <section id="home" class="hero">
         <div class="hero-content">
             <h1>Bringing the Clinic<br>to Your Workspace</h1>
             <p class="hero-description">
                 Instant doctor consultations through secure, local micro-clinics.
             </p>
-            <a href="/#book" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 1.1rem;">Get Started</a>
+            <a href="#book" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 1.1rem;">Get Started</a>
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- 2. About Us Section (Down below Home) -->
     <section id="about">
         <h2 class="section-title">About Us</h2>
         <div class="grid-3">
@@ -230,7 +236,7 @@
         </div>
     </section>
 
-    <!-- Solutions Section -->
+    <!-- 3. Solutions Section -->
     <section id="solutions" style="background: var(--light-bg); max-width: 100%;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 class="section-title">Our Solutions</h2>
@@ -254,7 +260,7 @@
         </div>
     </section>
 
-    <!-- For Corporations Section -->
+    <!-- 4. For Corporations Section -->
     <section id="corporations">
         <h2 class="section-title">For Corporations</h2>
         <div class="grid-3">
@@ -276,7 +282,7 @@
         </div>
     </section>
 
-    <!-- Book Now Section -->
+    <!-- 5. Book Now Section -->
     <section id="book" style="text-align: center; background: var(--light-bg); border-radius: 16px; margin-bottom: 4rem;">
         <h2 style="font-size: 2.2rem; color: var(--dark-teal); margin-bottom: 1rem;">Ready to Upgrade Your Workplace Healthcare?</h2>
         <p style="color: var(--text-muted); margin-bottom: 2rem;">Contact us today to install a GOYOH micro-clinic in your facility.</p>
