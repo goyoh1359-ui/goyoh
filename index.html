@@ -135,17 +135,19 @@
     <!-- Pricing Section -->
     <section id="pricing" class="py-24 bg-white border-y border-slate-100">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
                 <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">Transparent Plans & Pricing</h2>
-                <p class="text-slate-600 font-medium">Save massively by opting for our direct annual plans[cite: 10].</p>
+                <p class="text-slate-600 font-medium">Save massively by opting for our direct annual plans.</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            
+            <!-- 4-Column Pricing Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto items-stretch">
                 
                 <!-- 1. Starter / Solo (1 Seat) -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6 flex flex-col justify-between">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div>
-                            <span class="text-xs font-bold text-slate-600 bg-slate-200 px-2.5 py-1 rounded-md">1 Seat</span>
+                            <span class="text-xs font-bold text-slate-700 bg-slate-200 px-2.5 py-1 rounded-md">1 Seat</span>
                             <h3 class="text-lg font-bold text-slate-900 mt-2">Starter / Solo</h3>
                             <p class="text-xs text-slate-500 mt-1">For single independent practitioners</p>
                         </div>
@@ -157,17 +159,19 @@
                                 <span class="text-xs font-bold text-indigo-600">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
                             <li class="flex items-center gap-2">✓ Smart QR Code Queue</li>
                             <li class="flex items-center gap-2">✓ WhatsApp Prescriptions</li>
                             <li class="flex items-center gap-2">✓ Basic Patient EMR Lookup</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Get Starter Annual</a>
+                    <div class="pt-6">
+                        <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Get Starter Annual</a>
+                    </div>
                 </div>
 
                 <!-- 2. Professional (Up to 3 Doctors) -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6 flex flex-col justify-between">
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div>
                             <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md">Up to 3 Doctors</span>
@@ -182,22 +186,24 @@
                                 <span class="text-xs font-bold text-indigo-600">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
                             <li class="flex items-center gap-2">✓ Up to 3 Doctor Seats</li>
                             <li class="flex items-center gap-2">✓ Advanced WhatsApp Cloud API</li>
                             <li class="flex items-center gap-2">✓ Multi-Doctor Roster</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Get Professional</a>
+                    <div class="pt-6">
+                        <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Get Professional</a>
+                    </div>
                 </div>
 
-                <!-- 3. Growth / Multi-Clinic (Up to 5 Doctors) -->
-                <div class="bg-indigo-900 text-white p-6 rounded-2xl shadow-xl space-y-6 relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between">
+                <!-- 3. Multi-Clinic (Up to 5 Doctors - Highlighted) -->
+                <div class="bg-indigo-900 text-white p-6 rounded-2xl shadow-xl relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between">
                     <div class="absolute -right-12 -top-12 w-32 h-32 bg-indigo-600/30 rounded-full blur-2xl"></div>
                     <div class="space-y-4 relative z-10">
                         <div>
-                            <span class="bg-indigo-500 text-white text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Most Popular • Up to 5 Doctors</span>
-                            <h3 class="text-lg font-bold mt-2">Multi-Clinic</h3>
+                            <span class="bg-indigo-500 text-white text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider">Most Popular</span>
+                            <h3 class="text-lg font-bold mt-2">Multi-Clinic (Up to 5)</h3>
                             <p class="text-xs text-indigo-200 mt-1">For growing multi-specialty setups</p>
                         </div>
                         <div class="space-y-1">
@@ -208,21 +214,23 @@
                                 <span class="text-xs font-bold text-indigo-200">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-indigo-100">
+                        <ul class="space-y-2.5 text-xs text-indigo-100 pt-2">
                             <li class="flex items-center gap-2">✓ Up to 5 Doctor Seats</li>
                             <li class="flex items-center gap-2">✓ Advanced WhatsApp Automation</li>
                             <li class="flex items-center gap-2">✓ Role-based Access Control</li>
                             <li class="flex items-center gap-2">✓ Priority WhatsApp Support</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="block w-full py-2.5 bg-white text-indigo-900 text-center font-bold text-xs rounded-xl hover:bg-indigo-50 transition shadow-lg relative z-10">Get Multi-Clinic (₹29,999)</a>
+                    <div class="pt-6 relative z-10">
+                        <a href="#contact" class="block w-full py-2.5 bg-white text-indigo-900 text-center font-bold text-xs rounded-xl hover:bg-indigo-50 transition shadow-lg">Get Multi-Clinic</a>
+                    </div>
                 </div>
 
-                <!-- 4. Enterprise (Unlimited Seats) -->
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 space-y-6 flex flex-col justify-between">
+                <!-- 4. Enterprise (6+ Doctors / Unlimited) -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
                     <div class="space-y-4">
                         <div>
-                            <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">6+ Doctors / Unlimited</span>
+                            <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md">6+ Doctors</span>
                             <h3 class="text-lg font-bold text-slate-900 mt-2">Enterprise</h3>
                             <p class="text-xs text-slate-500 mt-1">For large hospitals & institutions</p>
                         </div>
@@ -234,13 +242,15 @@
                                 <span class="text-xs font-bold text-indigo-600">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
                             <li class="flex items-center gap-2">✓ Unlimited Doctor Seats (6+)</li>
                             <li class="flex items-center gap-2">✓ Custom API & EMR Integrations</li>
                             <li class="flex items-center gap-2">✓ Dedicated Account Manager</li>
                         </ul>
                     </div>
-                    <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Contact Enterprise</a>
+                    <div class="pt-6">
+                        <a href="#contact" class="block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl hover:bg-slate-800 transition">Contact Enterprise</a>
+                    </div>
                 </div>
 
             </div>
