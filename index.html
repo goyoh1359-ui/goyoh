@@ -42,7 +42,7 @@
                     Automate Your Clinic's <span class="text-indigo-600">Patient Queue</span> & WhatsApp Prescriptions.
                 </h1>
                 <p class="text-lg text-slate-600 font-medium leading-relaxed">
-                    Eliminate waiting room chaos. Send instant digital prescriptions in 10 seconds and keep patients updated via automated WhatsApp notifications.
+                    Eliminate waiting room chaos. Send digital prescriptions in 10 seconds and keep patients updated via automated WhatsApp notifications.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="#contact" class="bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-center shadow-lg shadow-indigo-600/30 hover:bg-indigo-700 transition">Get Started Today</a>
@@ -262,18 +262,12 @@
         function selectPricingCard(selectedCard) {
             const cards = document.querySelectorAll('.pricing-card');
             cards.forEach(card => {
-                // Reset unselected cards to clean slate background with dark text
                 card.className = "pricing-card cursor-pointer bg-slate-50 text-slate-900 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between transition-all duration-300 hover:shadow-lg";
-                
-                // Reset button style to consistent indigo theme
                 const btn = card.querySelector('button');
                 if(btn) btn.className = "block w-full py-2.5 bg-indigo-600 text-white text-center font-bold text-xs rounded-xl transition hover:bg-indigo-700";
             });
 
-            // Highlight selected card with consistent dark indigo theme and crisp white text
             selectedCard.className = "pricing-card cursor-pointer bg-indigo-900 text-white p-6 rounded-2xl shadow-xl relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl scale-[1.02]";
-            
-            // Style selected button to white with dark indigo text
             const selBtn = selectedCard.querySelector('button');
             if(selBtn) selBtn.className = "block w-full py-2.5 bg-white text-indigo-900 text-center font-bold text-xs rounded-xl transition shadow-lg hover:bg-indigo-50";
         }
