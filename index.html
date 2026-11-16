@@ -148,18 +148,18 @@
                     <div class="space-y-4">
                         <div>
                             <span class="text-xs font-bold text-slate-700 bg-slate-200 px-2.5 py-1 rounded-md badge-tag">1 Seat</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-2">Starter / Solo</h3>
-                            <p class="text-xs text-slate-500 mt-1">For single independent practitioners</p>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2 card-title">Starter / Solo</h3>
+                            <p class="text-xs text-slate-500 mt-1 card-desc">For single independent practitioners</p>
                         </div>
                         <div class="space-y-1">
-                            <div class="text-xs text-slate-500 font-medium">Monthly: ₹1,199 /mo</div>
+                            <div class="text-xs text-slate-500 font-medium monthly-text">Monthly: ₹1,199 /mo</div>
                             <div class="flex items-baseline gap-2">
-                                <span class="text-2xl font-extrabold text-slate-900">₹9,999</span>
-                                <span class="text-xs text-slate-400 line-through">₹14,388</span>
+                                <span class="text-2xl font-extrabold text-slate-900 price-text">₹9,999</span>
+                                <span class="text-xs text-slate-400 line-through old-price">₹14,388</span>
                                 <span class="text-xs font-bold text-indigo-600 year-label">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 feature-list">
                             <li class="flex items-center gap-2">✓ Smart QR Code Queue</li>
                             <li class="flex items-center gap-2">✓ WhatsApp Prescriptions</li>
                             <li class="flex items-center gap-2">✓ Basic Patient EMR Lookup</li>
@@ -175,18 +175,18 @@
                     <div class="space-y-4">
                         <div>
                             <span class="text-xs font-bold text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md badge-tag">Up to 3 Doctors</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-2">Professional</h3>
-                            <p class="text-xs text-slate-500 mt-1">For small multi-doctor clinics</p>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2 card-title">Professional</h3>
+                            <p class="text-xs text-slate-500 mt-1 card-desc">For small multi-doctor clinics</p>
                         </div>
                         <div class="space-y-1">
-                            <div class="text-xs text-slate-500 font-medium">Monthly: ₹2,199 /mo</div>
+                            <div class="text-xs text-slate-500 font-medium monthly-text">Monthly: ₹2,199 /mo</div>
                             <div class="flex items-baseline gap-2">
-                                <span class="text-2xl font-extrabold text-slate-900">₹19,999</span>
-                                <span class="text-xs text-slate-400 line-through">₹26,388</span>
+                                <span class="text-2xl font-extrabold text-slate-900 price-text">₹19,999</span>
+                                <span class="text-xs text-slate-400 line-through old-price">₹26,388</span>
                                 <span class="text-xs font-bold text-indigo-600 year-label">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 feature-list">
                             <li class="flex items-center gap-2">✓ Up to 3 Doctor Seats</li>
                             <li class="flex items-center gap-2">✓ Advanced WhatsApp Cloud API</li>
                             <li class="flex items-center gap-2">✓ Multi-Doctor Roster</li>
@@ -198,23 +198,23 @@
                 </div>
 
                 <!-- 3. Multi-Clinic (Up to 5 Doctors - Default Selected) -->
-                <div onclick="selectPricingCard(this)" class="pricing-card cursor-pointer bg-indigo-900 text-white p-6 rounded-2xl shadow-xl relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl">
+                <div onclick="selectPricingCard(this)" class="pricing-card cursor-pointer bg-indigo-900 text-white p-6 rounded-2xl shadow-xl relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl scale-[1.02]">
                     <div class="absolute -right-12 -top-12 w-32 h-32 bg-indigo-600/30 rounded-full blur-2xl"></div>
                     <div class="space-y-4 relative z-10">
                         <div>
                             <span class="bg-indigo-500 text-white text-xs font-bold px-2.5 py-1 rounded uppercase tracking-wider badge-tag">Most Popular</span>
-                            <h3 class="text-lg font-bold mt-2">Multi-Clinic (Up to 5)</h3>
-                            <p class="text-xs text-indigo-200 mt-1">For growing multi-specialty setups</p>
+                            <h3 class="text-lg font-bold mt-2 text-white card-title">Multi-Clinic (Up to 5)</h3>
+                            <p class="text-xs text-indigo-200 mt-1 card-desc">For growing multi-specialty setups</p>
                         </div>
                         <div class="space-y-1">
-                            <div class="text-xs text-indigo-200 font-medium">Monthly: ₹3,199 /mo</div>
+                            <div class="text-xs text-indigo-200 font-medium monthly-text">Monthly: ₹3,199 /mo</div>
                             <div class="flex items-baseline gap-2">
-                                <span class="text-2xl font-extrabold">₹29,999</span>
-                                <span class="text-xs text-indigo-300 line-through">₹38,388</span>
+                                <span class="text-2xl font-extrabold text-white price-text">₹29,999</span>
+                                <span class="text-xs text-indigo-300 line-through old-price">₹38,388</span>
                                 <span class="text-xs font-bold text-indigo-200 year-label">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-indigo-100 pt-2">
+                        <ul class="space-y-2.5 text-xs text-indigo-100 pt-2 feature-list">
                             <li class="flex items-center gap-2">✓ Up to 5 Doctor Seats</li>
                             <li class="flex items-center gap-2">✓ Advanced WhatsApp Automation</li>
                             <li class="flex items-center gap-2">✓ Role-based Access Control</li>
@@ -231,18 +231,18 @@
                     <div class="space-y-4">
                         <div>
                             <span class="text-xs font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-md badge-tag">6+ Doctors</span>
-                            <h3 class="text-lg font-bold text-slate-900 mt-2">Enterprise</h3>
-                            <p class="text-xs text-slate-500 mt-1">For large hospitals & institutions</p>
+                            <h3 class="text-lg font-bold text-slate-900 mt-2 card-title">Enterprise</h3>
+                            <p class="text-xs text-slate-500 mt-1 card-desc">For large hospitals & institutions</p>
                         </div>
                         <div class="space-y-1">
-                            <div class="text-xs text-slate-500 font-medium">Monthly: ₹4,999 /mo</div>
+                            <div class="text-xs text-slate-500 font-medium monthly-text">Monthly: ₹4,999 /mo</div>
                             <div class="flex items-baseline gap-2">
-                                <span class="text-2xl font-extrabold text-slate-900">₹49,999</span>
-                                <span class="text-xs text-slate-400 line-through">₹59,988</span>
+                                <span class="text-2xl font-extrabold text-slate-900 price-text">₹49,999</span>
+                                <span class="text-xs text-slate-400 line-through old-price">₹59,988</span>
                                 <span class="text-xs font-bold text-indigo-600 year-label">/ year</span>
                             </div>
                         </div>
-                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
+                        <ul class="space-y-2.5 text-xs text-slate-600 pt-2 feature-list">
                             <li class="flex items-center gap-2">✓ Unlimited Doctor Seats (6+)</li>
                             <li class="flex items-center gap-2">✓ Custom API & EMR Integrations</li>
                             <li class="flex items-center gap-2">✓ Dedicated Account Manager</li>
@@ -257,48 +257,36 @@
         </div>
     </section>
 
-    <!-- JavaScript to Handle Interactive Card Selection -->
+    <!-- JavaScript to Handle Interactive Card Selection & Contrast -->
     <script>
         function selectPricingCard(selectedCard) {
             const cards = document.querySelectorAll('.pricing-card');
             cards.forEach(card => {
                 // Reset all cards to default unselected style
-                card.className = "pricing-card cursor-pointer bg-slate-50 text-slate-900 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between transition-all duration-300 hover:shadow-lg";
+                card.className = "pricing-card cursor-pointer bg-slate-50 p-6 rounded-2xl border border-slate-200 flex flex-col justify-between transition-all duration-300 hover:shadow-lg";
                 
-                // Reset text colors back to default slate
-                const title = card.querySelector('h3');
-                if(title) title.className = "text-lg font-bold text-slate-900 mt-2";
-                
-                const desc = card.querySelector('p');
-                if(desc) desc.className = "text-xs text-slate-500 mt-1";
-
-                const price = card.querySelector('.text-2xl');
-                if(price) price.className = "text-2xl font-extrabold text-slate-900";
-
-                const yearLabel = card.querySelector('.year-label');
-                if(yearLabel) yearLabel.className = "text-xs font-bold text-indigo-600 year-label";
-
-                const btn = card.querySelector('button');
-                if(btn) btn.className = "block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl transition btn-style";
+                // Reset text colors back to slate dark/light
+                card.querySelector('.card-title').className = "text-lg font-bold text-slate-900 mt-2 card-title";
+                card.querySelector('.card-desc').className = "text-xs text-slate-500 mt-1 card-desc";
+                card.querySelector('.monthly-text').className = "text-xs text-slate-500 font-medium monthly-text";
+                card.querySelector('.price-text').className = "text-2xl font-extrabold text-slate-900 price-text";
+                card.querySelector('.old-price').className = "text-xs text-slate-400 line-through old-price";
+                card.querySelector('.year-label').className = "text-xs font-bold text-indigo-600 year-label";
+                card.querySelector('.feature-list').className = "space-y-2.5 text-xs text-slate-600 pt-2 feature-list";
+                card.querySelector('button').className = "block w-full py-2.5 bg-slate-900 text-white text-center font-bold text-xs rounded-xl transition btn-style";
             });
 
-            // Style the clicked card into blue/indigo theme
+            // Style the clicked card into high-contrast dark blue theme with white text
             selectedCard.className = "pricing-card cursor-pointer bg-indigo-900 text-white p-6 rounded-2xl shadow-xl relative overflow-hidden border-2 border-indigo-500 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl scale-[1.02]";
             
-            const selTitle = selectedCard.querySelector('h3');
-            if(selTitle) selTitle.className = "text-lg font-bold text-white mt-2";
-
-            const selDesc = selectedCard.querySelector('p');
-            if(selDesc) selDesc.className = "text-xs text-indigo-200 mt-1";
-
-            const selPrice = selectedCard.querySelector('.text-2xl');
-            if(selPrice) selPrice.className = "text-2xl font-extrabold text-white";
-
-            const selYearLabel = selectedCard.querySelector('.year-label');
-            if(selYearLabel) selYearLabel.className = "text-xs font-bold text-indigo-200 year-label";
-
-            const selBtn = selectedCard.querySelector('button');
-            if(selBtn) selBtn.className = "block w-full py-2.5 bg-white text-indigo-900 text-center font-bold text-xs rounded-xl transition shadow-lg btn-style";
+            selectedCard.querySelector('.card-title').className = "text-lg font-bold text-white mt-2 card-title";
+            selectedCard.querySelector('.card-desc').className = "text-xs text-indigo-200 mt-1 card-desc";
+            selectedCard.querySelector('.monthly-text').className = "text-xs text-indigo-200 font-medium monthly-text";
+            selectedCard.querySelector('.price-text').className = "text-2xl font-extrabold text-white price-text";
+            selectedCard.querySelector('.old-price').className = "text-xs text-indigo-300 line-through old-price";
+            selectedCard.querySelector('.year-label').className = "text-xs font-bold text-indigo-200 year-label";
+            selectedCard.querySelector('.feature-list').className = "space-y-2.5 text-xs text-indigo-100 pt-2 feature-list";
+            selectedCard.querySelector('button').className = "block w-full py-2.5 bg-white text-indigo-900 text-center font-bold text-xs rounded-xl transition shadow-lg btn-style";
         }
     </script>
 
